@@ -41,16 +41,10 @@ docker-compose down
 
 Environment variables are stored in `.env`:
 
-- `WO_PORT` - Port to access the web interface (default: 6001)
-- `WO_DEBUG` - Debug mode (NO/YES)
-- `WO_MEDIA_DIR` - Directory for media files
-- `WO_DB_DIR` - Database volume location
-- `WO_BROKER` - Redis broker URL
-
 ## Running Multiple Instances
 
 This setup supports running multiple WebODM instances simultaneously. Each instance uses:
-- A unique project name prefix (`webodm1`, `webodm2`, etc.)
+- A unique project name prefix (`webodm1`, `webodm2`, etc.) (only changes needed are in the .env file)
 - A different port number
 - Isolated databases and volumes
 - Separate media directories
@@ -75,18 +69,6 @@ Common PostgreSQL commands:
 - `\dt` - List tables
 - `\q` - Quit
 
-## Logs
-
-View logs from all services:
-```bash
-docker-compose logs -f
-```
-
-View logs from a specific service:
-```bash
-docker-compose logs -f webapp
-```
-
 ## Upgrading
 
 To upgrade to the latest image versions:
@@ -98,9 +80,7 @@ docker-compose up -d
 
 ## Storage
 
-Media files and database data are persisted in Docker volumes:
-- `webodm1_dbdata` - PostgreSQL database
-- `webodm1_appmedia` - Uploaded drone images and processing results
+Media files and database data are persisted in mapped paths in the example .env
 
 ## Support
 
