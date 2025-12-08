@@ -1,3 +1,8 @@
+# What is this project?
+
+This is my simple docker-compose file that allows for more than one webodm instance to run on the same host.  To spin up multiple instances just copy the folder to a new location and modify desired values in
+.env file
+
 # WebODM 
 
 A Docker Compose setup for running WebODM (Web Orthomosaic and Digital Elevation Model) - an open-source toolkit for processing drone imagery into maps and 3D models.
