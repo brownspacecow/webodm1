@@ -28,7 +28,7 @@ services:
       - WO_PORT
       - WO_HOST
       - WO_DEBUG
-      - WO_BROKER
+      - WO_BROKER=${WO_BROKER}
       - WO_DEV
       - WO_DEV_WATCH_PLUGINS
       - WO_SECRET_KEY
@@ -51,7 +51,7 @@ services:
       - db
       - broker
     environment:
-      - WO_BROKER
+      - WO_BROKER=${WO_BROKER}
       - WO_DEBUG
       - WO_SECRET_KEY
       - WEB_CONCURRENCY
